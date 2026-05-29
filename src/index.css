@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --color-accent: #14b8a6;
+  --color-accent-muted: #0d9488;
+  --color-surface: var(--theme-surface);
+  --color-surface-elevated: var(--theme-surface-elevated);
+  --color-border: var(--theme-border);
+  --color-text: var(--theme-text);
+  --color-text-muted: var(--theme-text-muted);
+}
+
+@layer base {
+  :root {
+    --theme-surface: #fafafa;
+    --theme-surface-elevated: #ffffff;
+    --theme-border: color-mix(in srgb, black 8%, transparent);
+    --theme-text: #18181b;
+    --theme-text-muted: #71717a;
+  }
+
+  .dark {
+    --theme-surface: #0a0a0f;
+    --theme-surface-elevated: #12121a;
+    --theme-border: color-mix(in srgb, white 8%, transparent);
+    --theme-text: #f4f4f5;
+    --theme-text-muted: #a1a1aa;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface font-sans text-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-teal-500/35;
+  }
+}
