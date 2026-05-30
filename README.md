@@ -28,4 +28,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Customize
 
-Edit resume content in `src/data/portfolio.ts`.
+Edit site content in `src/data/portfolio.ts`.
+
+Replace `public/resume.pdf` with your resume PDF (downloads use the filename in `resume.downloadFilename`).

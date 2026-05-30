@@ -9,6 +9,13 @@ export const profile = {
   github: 'https://github.com/vishalsinghkv',
 } as const
 
+/** Served from `public/` — replace `public/resume.pdf` with your latest resume. */
+export const resume = {
+  /** Path segment only; full URL is built with `import.meta.env.BASE_URL` in ResumeDownload. */
+  path: 'resume.pdf',
+  downloadFilename: 'Vishal-Kumar-Singh-Resume.pdf',
+} as const
+
 export const skillCategories = [
   {
     label: 'Frontend',

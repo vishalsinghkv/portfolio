@@ -3,6 +3,7 @@ import { ArrowDown, Mail, Phone } from 'lucide-react'
 import { GitHubIcon, LinkedInIcon } from './icons/SocialIcons'
 import { profile } from '../data/portfolio'
 import { glass } from '../lib/styles'
+import { ResumeDownload } from './ResumeDownload'
 
 const socials = [
   { href: `mailto:${profile.email}`, icon: Mail, label: 'Email' },
@@ -62,6 +63,9 @@ export function Hero() {
             >
               View experience
             </a>
+            <ResumeDownload
+              className={`${glass} inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-teal-500/40`}
+            />
           </div>
 
           <div className="mt-12 flex flex-wrap gap-3">

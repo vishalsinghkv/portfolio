@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { navLinks, profile } from '../data/portfolio'
 import { glass } from '../lib/styles'
+import { ResumeDownload } from './ResumeDownload'
 import { ThemeToggle } from './ThemeToggle'
 
 export function Navbar() {
@@ -52,6 +53,7 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
+          <ResumeDownload className="inline-flex items-center gap-1.5 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-2 text-sm font-semibold text-teal-600 transition-colors hover:bg-teal-500/20 dark:text-teal-400" />
           <ThemeToggle />
         </div>
 
@@ -84,6 +86,10 @@ export function Navbar() {
               {link.label}
             </button>
           ))}
+          <ResumeDownload
+            className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg bg-teal-500/10 px-4 py-3 text-sm font-semibold text-teal-600 dark:text-teal-400"
+            onClick={() => setOpen(false)}
+          />
         </motion.div>
       )}
     </motion.nav>
